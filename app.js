@@ -66,14 +66,18 @@
 
 	var _reducers2 = _interopRequireDefault(_reducers);
 
+	var _store = __webpack_require__(193);
+
+	var _store2 = _interopRequireDefault(_store);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var store = (0, _redux.createStore)(_reducers2.default);
+	//const store = createStore(counterApp);
 	var appElement = document.getElementById('app');
 
 	_reactDom2.default.render(_react2.default.createElement(
 	    _reactRedux.Provider,
-	    { store: store },
+	    { store: _store2.default },
 	    _react2.default.createElement(_App2.default, null)
 	), appElement);
 
@@ -21797,6 +21801,36 @@
 	});
 
 	exports.default = counterApp;
+
+/***/ },
+/* 193 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(158);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _redux = __webpack_require__(159);
+
+	var _reducers = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./counter/reducers\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _reducers2 = _interopRequireDefault(_reducers);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var store = (0, _redux.createStore)(_reducers2.default);
+
+	exports.default = store;
 
 /***/ }
 /******/ ]);
